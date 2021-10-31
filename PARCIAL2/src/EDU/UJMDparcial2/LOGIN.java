@@ -5,10 +5,14 @@
  */
 package EDU.UJMDparcial2;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import EDU.UJMDparcial2.Controlador.Bitacora;
+
 
 /**
  *
@@ -47,6 +51,12 @@ public class LOGIN extends javax.swing.JFrame {
         txtusuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtusuarioActionPerformed(evt);
+            }
+        });
+
+        txtcontrasena.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtcontrasenaActionPerformed(evt);
             }
         });
 
@@ -114,13 +124,16 @@ public class LOGIN extends javax.swing.JFrame {
     }//GEN-LAST:event_txtusuarioActionPerformed
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
+        String usuario = "";
+        String pass = "";
+        Bitacora dw = new Bitacora();
         try {
             ConexionMySQL Con = new ConexionMySQL();
             String Usuario = txtusuario.getText();
             String Contrasena = txtcontrasena.getText();
-            Con.ConectarBasedeDatos();
-            String SQL = "SELECT COUNT (ID) AS i FROM usuario WHERE USUARIO ='" + Usuario + "'"
-                    + "AND CONTRASENA ='" + Contrasena + "' ";
+            Con.Conectar();
+            String SQL = "SELECT Usuario AS i FROM dbrestaurante.usuarios WHERE Usuario ='" + txtusuario.getText() + "'"
+                    + "SELECT Cotraseña FROM dbrestaurante.usuarios WHERE Contraseña ='" + txtcontrasena.getText()+ "' ";
             Con.resultado = Con.sentencia.executeQuery(SQL);
             while (Con.resultado.next()) {
                 if (Con.resultado.getString("i").equals("1")) {
@@ -131,11 +144,15 @@ public class LOGIN extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null, "Usuario o Contraseña Invalida");
                 }
             }
-            Con.DesconectarBasedeDatos();
+            Con.cerrarConexion();
         } catch (SQLException ex) {
             Logger.getLogger(LOGIN.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnIngresarActionPerformed
+
+    private void txtcontrasenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcontrasenaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtcontrasenaActionPerformed
 
     /**
      * @param args the command line arguments
