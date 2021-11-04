@@ -10,15 +10,16 @@ gestor de base de datos Mysql
 
 Autores del proyecto
 
-Jessica Alexandra Alberto
-
 Jorge Alexander Cerna
 
 Roger Alexis Perez
 
 Melvin Javier Aguilar
 
-William Cerna
+William Ernesto Serna
+
+Jessica Alexandra Alberto
+
 
 Enlaces
 
@@ -28,4 +29,5 @@ Manual de usuario:
 
 Manual Técnico:
 
-Enlace a Mockups  https://app.moqups.com/NOwBV3LZbi/view/page/ad9d885da 
+Enlace a Mockups :
+ https://app.moqups.com/NOwBV3LZbi/view/page/ad9d885da
