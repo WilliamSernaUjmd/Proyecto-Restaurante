@@ -7,8 +7,11 @@ gestor de base de datos Mysql
 
 Autores del proyecto
 Jessica Alexandra Alberto
+
 Jorge Alexander Cerna
+
 Roger Alexis Perez
+
 Melvin Javier Aguilar
 William Cerna
 
