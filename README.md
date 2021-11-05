@@ -29,5 +29,5 @@ Manual de usuario:
 
 Manual Técnico: https://drive.google.com/file/d/1Lu5bOAKoO6nuDJt9zZD2_Ws0lGJNKhvd/view?usp=sharing
 
-Enlace a Mockups :
+Enlace a Mockups : 
  https://app.moqups.com/NOwBV3LZbi/view/page/ad9d885da
