@@ -27,7 +27,7 @@ Tablero de Trello: https://trello.com/invite/b/I857ezIg/e7a38b9fa496142db63173df
 
 Manual de usuario:
 
-Manual Técnico:
+Manual Técnico: https://drive.google.com/file/d/1Lu5bOAKoO6nuDJt9zZD2_Ws0lGJNKhvd/view?usp=sharing
 
 Enlace a Mockups :
  https://app.moqups.com/NOwBV3LZbi/view/page/ad9d885da
